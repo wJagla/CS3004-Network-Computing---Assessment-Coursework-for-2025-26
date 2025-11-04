@@ -12,7 +12,7 @@ Clients connect via TCP sockets; mutual exclusion ensures safe concurrent access
 ## Classes
 - `WarehouseServer` – listens on a ServerSocket and spawns `WarehouseServerThread` per client connection, passing the shared state containing the shared resource.
   
-- `WarehouseServerThread` – per-client logic. Carries out the additional handshake to aquire client type and ID. Facilitate the read–process–respond loop with locking around state access.
+- `WarehouseServerThread` – per-client logic. Carries out the additional handshake to acquire client type and ID. Facilitate the read–process–respond loop with locking around state access.
   
 - `SharedWarehouseState` – Contains the shared variables. Processes requests from the client to correctly modify the shared variables. Houses the locking logic.
   
