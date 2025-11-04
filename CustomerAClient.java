@@ -47,11 +47,12 @@ public class CustomerAClient {
         	System.out.println("Server: " + fromServer);
         }
         
-        //  out.close();
-        // in.close();
-        // stdIn.close();
-        // WarehouseClientSocket.close();
+        out.close();
+        in.close();
+        stdIn.close();
+        WarehouseClientSocket.close();
         
 	}
 
 }
+
